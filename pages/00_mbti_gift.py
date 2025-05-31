@@ -1,6 +1,10 @@
 import streamlit as st
 
-# MBTI별 선물 추천 데이터
+# 페이지 제목
+st.set_page_config(page_title="MBTI 선물 추천", page_icon="🎁")
+st.title("🎁 MBTI 기반 선물 추천 사이트")
+
+# MBTI별 선물 추천 딕셔너리
 mbti_gift_recommendations = {
     "INTJ": "프리미엄 다이어리, 고급 만년필, 전략 보드게임",
     "INTP": "퍼즐, 독특한 책, 기계 장난감 또는 실험 키트",
@@ -20,17 +24,10 @@ mbti_gift_recommendations = {
     "ESFP": "LED 거울, 블루투스 스피커, 네온 조명"
 }
 
-# 앱 제목
-st.title("🎁 MBTI 기반 선물 추천 사이트")
-
 # MBTI 선택
-st.header("당신의 MBTI를 선택하세요")
+st.header("1️⃣ MBTI를 선택하세요")
 mbti_list = list(mbti_gift_recommendations.keys())
-selected_mbti = st.selectbox("MBTI 유형:", mbti_list)
+selected_mbti = st.selectbox("MBTI 유형 선택", [""] + mbti_list)
 
 # 결과 출력
-if selected_mbti:
-    recommendation = mbti_gift_recommendations[selected_mbti]
-    st.subheader(f"🧠 {selected_mbti} 유형에게 어울리는 선물은?")
-    st.write(f"👉 {recommendation}")
-
+if selected_mbt_
