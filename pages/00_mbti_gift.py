@@ -34,5 +34,3 @@ selected_mbti = st.selectbox("MBTI 유형 선택", [""] + list(mbti_gift_recomme
 if selected_mbti:
     st.subheader(f"🎀 {selected_mbti} 유형에게 추천하는 선물:")
     st.write(mbti_gift_recommendations[selected_mbti])
-
-
